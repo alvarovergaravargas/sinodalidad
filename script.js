@@ -1,5 +1,5 @@
 // URL para Google Apps Script (Reemplazar con la tuya)
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyysJonefMcJSuGPivDO5VZ6-gNAUs8N-kdPdkUsb60dhc_fLoXmN3LW0Cti9Qcj05M/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwumc2IwaYEF4aaMnUqzbz3aWRKSWx4OnB5LHHlkFE2sdrYOlKTh7W9yxB4dLPRD3DL/exec';
 
 // Banco de 50 Preguntas del Documento Final
 const questionBank = [
