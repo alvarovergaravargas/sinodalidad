@@ -98,6 +98,7 @@ input[type="email"] {
     border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
+    margin-bottom: 10px; /* Añadido para separar los campos del botón */
 }
 input[type="text"]:focus,
 input[type="email"]:focus {
@@ -121,6 +122,7 @@ input[type="email"]:focus {
 .btn-primary {
     background-color: var(--color-pink);
     color: white;
+    width: 100%; /* Hacemos que el botón ocupe todo el ancho */
 }
 .btn-primary:hover {
     filter: brightness(1.2);
@@ -179,33 +181,65 @@ input[type="email"]:focus {
 .btn-answer[data-color="yellow"] { background-color: var(--color-yellow); }
 .btn-answer[data-color="green"] { background-color: var(--color-green); }
 
-.btn-answer:hover {
+.btn-answer:hover:not(:disabled) {
     filter: brightness(1.2);
+}
+.btn-answer:disabled {
+    cursor: not-allowed;
 }
 
 .btn-answer.correct {
     animation: pulse-correct 0.5s;
     border: 4px solid white;
+    box-shadow: 0 0 15px var(--color-green);
 }
 .btn-answer.incorrect {
     animation: shake-incorrect 0.5s;
     background-color: #555;
-    opacity: 0.7;
+    opacity: 0.6;
+    border: 4px dashed #888;
 }
 
+/* --- ESTILOS PARA FEEDBACK Y BOTÓN SIGUIENTE --- */
 #feedback-container {
     margin-top: 20px;
-    min-height: 60px;
+    padding: 15px;
+    background: #333;
+    border-radius: 8px;
+    min-height: 100px;
+    text-align: left;
 }
 #feedback-text {
     font-size: 1.3rem;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 #feedback-citation {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--color-yellow);
-    margin-top: 5px;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
+#feedback-summary {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
+#next-question-btn {
+    margin-top: 20px;
+    width: 100%;
+    background-color: var(--color-green);
+    color: white;
+}
+#next-question-btn:hover {
+    filter: brightness(1.2);
+}
+.hidden {
+    display: none;
+}
+/* ------------------------------------------- */
+
 
 /* --- Pantalla de Resultados --- */
 #final-name {
@@ -217,6 +251,17 @@ input[type="email"]:focus {
     color: var(--color-green);
     margin: 20px 0;
 }
+
+/* --- ESTILO BOTÓN REINICIO (usa el de btn-level) --- */
+#restart-btn {
+    margin-top: 10px;
+    border-color: var(--color-green);
+}
+#restart-btn:hover {
+    background-color: var(--color-green);
+    color: var(--color-bg);
+}
+
 .btn-whatsapp {
     background-color: #25D366;
     color: white;
