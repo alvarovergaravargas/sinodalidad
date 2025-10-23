@@ -318,13 +318,14 @@ const questionBank = [
             { text: 'El Consejo Presbiteral', correct: false }
         ]
     },
-    {
-        question: 'El documento habla de una "saludable 'descentralización'" (EG 16) en el ejercicio del ministerio petrino.',
-        answers: [
-            { text: 'Verdadero', correct: true, citation: '[cite: 890, 912]' },
-            { text: 'Falso', correct: false }
-        ]
-    },
+  // --- ESTE ES EL BLOQUE CORREGIDO ---
+{
+    question: `El documento habla de una "saludable 'descentralización'" (EG 16) en el ejercicio del ministerio petrino.`,
+    answers: [
+        { text: 'Verdadero', correct: true, citation: '' },
+        { text: 'Falso', correct: false }
+    ]
+},
     {
         question: '¿Quién es el garante de la sinodalidad, que convoca, preside y confirma los resultados del Sínodo?',
         answers: [
