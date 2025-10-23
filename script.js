@@ -481,14 +481,24 @@ const finalScore = document.getElementById('final-score');
 
 loginForm.addEventListener('submit', handleLogin);
 
+// --- NUEVA FUNCIÓN PARA ARREGLAR EL BOTÓN ---
+
 function handleLogin(e) {
-    e.preventDefault();
+    e.preventDefault(); // Evita que la página se recargue
     userName = document.getElementById('user-name').value;
-    const userEmail = document.getElementById('user-email').value;
-    
-    // Guardar datos
-    sendDataToGoogleSheet(userName, userEmail);
-    
+    const userEmail = document.getElementById('user-email').value; // Aún capturamos el email
+
+    // Si el nombre está vacío, pedimos que lo escriban
+    if (!userName || !userEmail) {
+        alert("Por favor, escribe tu nombre y correo");
+        return;
+    }
+
+    // --- HEMOS "COMENTADO" (DESACTIVADO) EL ENVÍO A GOOGLE ---
+    // sendDataToGoogleSheet(userName, userEmail); 
+
+    console.log("Inicio de sesión exitoso, pasando a la pantalla de nivel."); // Mensaje de prueba
+
     // Actualizar nombres y cambiar pantalla
     welcomeName.innerText = userName;
     finalName.innerText = userName;
