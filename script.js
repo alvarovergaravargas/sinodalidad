@@ -496,7 +496,7 @@ function handleLogin(e) {
     }
 
     // --- HEMOS "COMENTADO" (DESACTIVADO) EL ENVÍO A GOOGLE ---
-    // sendDataToGoogleSheet(userName, userEmail); 
+    sendDataToGoogleSheet(userName, userEmail); 
 
     console.log("Inicio de sesión exitoso, pasando a la pantalla de nivel."); // Mensaje de prueba
 
