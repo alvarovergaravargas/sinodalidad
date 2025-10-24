@@ -1,8 +1,6 @@
 // URL para Google Apps Script (Reemplazar con la tuya)
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwumc2IwaYEF4aaMnUqzbz3aWRKSWx4OnB5LHHlkFE2sdrYOlKTh7W9yxB4dLPRD3DL/exec';
 
-// URL para Google Apps Script (Reemplazar con la tuya)
-const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
 
 // Banco de 100 Preguntas del Documento Final (AHORA SÍ, CON COMAS CORREGIDAS)
 const questionBank = [
