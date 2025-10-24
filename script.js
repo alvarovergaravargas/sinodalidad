@@ -6,7 +6,7 @@ const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwumc2IwaYEF4
 const questionBank = [
     // --- Preguntas 1-50 (Originales) ---
     {
-        question: '¿Cuál es el tema central del Sínodo 2021-2024?',
+        question: '¿Cuál es el tema central del Sínodo 2021-2024?', // Coma verificada
         citation: "Documento Final, Título",
         summary: "El título oficial del Documento Final es 'Por una Iglesia sinodal: comunión, participación y misión'. Este es el tema central que ha guiado todo el proceso.",
         answers: [
@@ -17,7 +17,7 @@ const questionBank = [
         ]
     },
     {
-        question: 'Según el Papa Francisco, el Documento Final participa del...',
+        question: 'Según el Papa Francisco, el Documento Final participa del...', // Coma verificada
         citation: "Nota de acompañamiento, n. 15",
         summary: "En su 'Nota de acompañamiento' (n. 15), el Papa Francisco aprueba el documento y afirma que 'participa del Magisterio ordinario del Sucesor de Pedro'.",
         answers: [
@@ -1083,8 +1083,8 @@ const questionBank = [
             { text: 'Temas financieros únicamente', correct: false }
         ]
     },
-     { // Pregunta #99 - ¡COMA CORREGIDA!
-        question: '¿Qué palabra clave repite el Papa tres veces en su saludo final, refiriéndose a quién está invitado al banquete?',
+    { // Pregunta #99 - ¡COMA VERIFICADA!
+        question: '¿Qué palabra clave repite el Papa tres veces en su saludo final, refiriéndose a quién está invitado al banquete?', // Coma verificada
         citation: "Apéndice, n. 1157",
         summary: "En su saludo final (n. 1157), el Papa insistió en la inclusión, diciendo que el banquete es para 'Todos, con la esperanza de que no falte ninguno. ¡Todos, todos, todos!'.",
         answers: [
@@ -1094,8 +1094,8 @@ const questionBank = [
             { text: 'Pobres, pobres, pobres', correct: false }
         ]
     },
-    { // Pregunta #100
-        question: '¿Qué poeta y mística citó el Papa Francisco en su saludo final?',
+    { // Pregunta #100 - Coma verificada
+        question: '¿Qué poeta y mística citó el Papa Francisco en su saludo final?', // Coma verificada
         citation: "Apéndice, n. 1165",
         summary: "El Papa (n. 1165) citó una poesía de 'Madeleine Delbrêl, la mística de las periferias', que pide a Dios 'no mostrarse rígido'.",
         answers: [
