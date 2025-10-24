@@ -83,7 +83,7 @@ p {
     margin-bottom: 25px;
 }
 
-#login-form {
+#login-form { /* Aunque ya no es un form, mantenemos estilos */
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -98,7 +98,7 @@ input[type="email"] {
     border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    margin-bottom: 10px; /* Añadido para separar los campos del botón */
+    margin-bottom: 10px;
 }
 input[type="text"]:focus,
 input[type="email"]:focus {
@@ -122,11 +122,62 @@ input[type="email"]:focus {
 .btn-primary {
     background-color: var(--color-pink);
     color: white;
-    width: 100%; /* Hacemos que el botón ocupe todo el ancho */
+    width: 100%;
 }
 .btn-primary:hover {
     filter: brightness(1.2);
 }
+
+/* --- Estilos de Instrucciones --- */
+.instructions-text {
+    text-align: left;
+    margin: 25px auto;
+    max-width: 90%;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+.instructions-text p {
+    color: var(--color-text);
+}
+.instructions-text ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 15px; /* Separación de la intro */
+}
+.instructions-text li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+.instructions-text li span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    color: var(--color-blue);
+    font-size: 1.1rem;
+    background-color: rgba(0, 174, 239, 0.1); /* Fondo azul claro semi-transparente */
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+}
+#instructions-name {
+    color: var(--color-blue);
+    font-weight: 700;
+}
+#continue-to-level-btn {
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--color-blue); /* Botón azul */
+}
+#continue-to-level-btn:hover {
+    filter: brightness(1.2);
+}
+/* ------------------------------------- */
+
 
 /* --- Pantalla de Nivel --- */
 #welcome-name {
@@ -194,13 +245,19 @@ input[type="email"]:focus {
     box-shadow: 0 0 15px var(--color-green);
 }
 .btn-answer.incorrect {
-    animation: shake-incorrect 0.5s;
-    background-color: #555;
+    /* animation: shake-incorrect 0.5s; No shake, solo atenuar */
+    background-color: #555 !important; /* Forza el gris sobre el color base */
     opacity: 0.6;
     border: 4px dashed #888;
 }
+.btn-answer.incorrect-selected { /* Para la incorrecta que SÍ seleccionó el usuario */
+    opacity: 1; /* Le devolvemos opacidad */
+    border: 4px solid var(--color-red); /* Borde rojo */
+    animation: shake-incorrect 0.5s; /* Y la hacemos temblar */
+}
 
-/* --- ESTILOS PARA FEEDBACK Y BOTÓN SIGUIENTE --- */
+
+/* --- Estilos para Feedback y Botón Siguiente --- */
 #feedback-container {
     margin-top: 20px;
     padding: 15px;
@@ -252,7 +309,7 @@ input[type="email"]:focus {
     margin: 20px 0;
 }
 
-/* --- ESTILO BOTÓN REINICIO (usa el de btn-level) --- */
+/* --- Estilo Botón Reinicio (usa el de btn-level) --- */
 #restart-btn {
     margin-top: 10px;
     border-color: var(--color-green);
@@ -274,7 +331,7 @@ input[type="email"]:focus {
 .btn-whatsapp:hover {
     filter: brightness(1.1);
 }
-.btn-secondary {
+.btn-secondary { /* Estilo general para botón secundario */
     background: none;
     border: 2px solid var(--color-text-secondary);
     color: var(--color-text-secondary);
@@ -283,6 +340,27 @@ input[type="email"]:focus {
     background: var(--color-text-secondary);
     color: var(--color-bg);
 }
+
+/* --- Estilos para Feedback de Resultados --- */
+#results-feedback {
+    margin: 20px 0;
+    padding: 15px;
+    background: #333; /* Fondo similar al feedback de pregunta */
+    border-radius: 8px;
+}
+.results-emoji {
+    font-size: 4rem; /* Emoji grande */
+    display: block;
+    margin-bottom: 10px;
+}
+.results-message {
+    font-size: 1.1rem;
+    color: var(--color-text); /* Texto blanco, no secundario */
+    line-height: 1.5;
+    margin-bottom: 0; /* Quitamos margen inferior extra */
+}
+/* ---------------------------------------------- */
+
 
 /* Animaciones */
 @keyframes pulse-correct {
@@ -304,4 +382,5 @@ input[type="email"]:focus {
     h1 { font-size: 2rem; }
     .kahoot-grid { grid-template-columns: 1fr; }
     .btn-answer { min-height: 80px; }
+    .instructions-text { max-width: 100%; }
 }
