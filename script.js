@@ -987,7 +987,7 @@ const questionBank = [
     {
         question: 'El documento pide que la catequesis sea cada vez más...',
         citation: "Parte V, n. 145",
-        summary: "El n. 145 pide que la catequesis sea '"en salida" y hacia afuera... un "laboratorio de diálogo" con los hombres y mujeres de nuestro tiempo'.",
+        summary: "El n. 145 pide que la catequesis sea 'en salida' y hacia afuera... un 'laboratorio de diálogo' con los hombres y mujeres de nuestro tiempo'.",
         answers: [
             { text: '"En salida" y un "laboratorio de diálogo"', correct: true },
             { text: 'Memorística y doctrinal', correct: false },
